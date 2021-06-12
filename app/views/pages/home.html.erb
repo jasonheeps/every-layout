@@ -1,2 +1,27 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<header>
+  <h1>Every Layout</h1>
+  <p>This page is the result of practicing CSS while reading through the EPUB of <a href="https://every-layout.dev/" target="blank">Every Layout</a>.</p>
+</header>
+
+<section>
+  <h2>Main learnings</h2>
+  <p>I took notes for each chapter which is not a Layout Primitive (Box, Stack, Cluster, ...). For the Layout Primites, I have recreated them. </p>
+  <h3>Boxes</h3>
+  <p>Use box-sizing: border-box for (almost) all elements.</p>
+  <h3>Composition</h3>
+  <p>Use <em>primitives</em> to style components. A primitive is a very simple piece of layout with a simple responsibility, e.g. Stack: "space elements vertically".</p>
+  <h3>Units</h3>
+  <p>Use relative units (rem, em, ch) based on the context.</p>
+  <h3>Global and local styling</h3>
+  <p>Use global styles (e.g. body{...} or p{...}) wherever possible and create exceptions from the rule by using utility classes which modify global variables.</p>
+  <h3>Modular scale</h3>
+  <p>Define global CSS rules in a harmonic way by in-/decreasing by the same ratio.</p>
+  <h3>Axioms</h3>
+  <p>Use exception-based global styling with global variables to apply basic rules to many elements at once. Rely on the browser's algorithms to design responsive pages rather than defining pixels or using media queries.</p>
+</section>
+
+<section>
+  <h2>Layout Primitives</h2>
+  <p><a href="/stack">The Stack</a></p>
+  <p><a href="/box">The Box</a></p>
+</section>

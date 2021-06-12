@@ -1,0 +1,59 @@
+// *************
+// * VARIABLES *
+// *************
+$ratio: 1.25;
+
+// * borders *
+$border-width: 0.125rem;
+// $border-width-sm: $border-width / $ratio;
+// $border-witdh-lg: $border-width: * $ratio;
+
+// * margins *
+$margin-base: 1.5rem;
+
+// Question: Does it make sense to create such specific variables?
+// (bootstrap kind of does it too)
+// And if so, does it make sense to define them directly in e.g. stack.scss?
+$stack-child-mt: $margin-base;
+$stack-child-mt-sm: $margin-base / $ratio;
+$stack-child-mt-lg: $margin-base * $ratio;
+
+// *********
+// * RULES *
+// *********
+* {
+  box-sizing: border-box;
+}
+
+// Exception-based approach for setting max-width:
+* {
+  max-width: 60ch;
+}
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-width: none;
+}
+
+// Question: Does this make sense?
+// Or would I rather apply this to a .container?
+body {
+  padding: 1rem;
+}
+
+// *******************
+// * UTILITY CLASSES *
+// *******************
+
+// Question: What's the definition of utility classes?
+// Is 'border-dark' a utility class?
+
+.border-dark {
+  border: $border-width solid $gray;
+}
+
+

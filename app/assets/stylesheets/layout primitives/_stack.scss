@@ -1,0 +1,74 @@
+// This is only for readability reasons,
+// not part of the 'Every Layout' concept.
+// To be refactored!
+[class^='stack'] {
+  div {
+    padding: 1rem;
+  }
+}
+
+.stack + h2 {
+  margin-top: 2rem;
+}
+
+// *********
+// * Stack *
+// *********
+
+// Selects class values that begin with 'stack'
+[class^='stack'] > * {
+  // Question: Why do I need this reset?
+
+  // Resets existing margins
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack {
+  // They use 1.5rem since 1.5 is the default line-height.
+
+  // Question: How can I use the line-height dynamically here such that
+  // if it changes, the space remains consistent?
+  // I tried calc($line-height-base * $font-size-base) - didn't work.
+
+  --space: 1.5rem;
+
+  // Selects every direct child but the first one
+  & > * + * {
+    margin-top: var(--space);
+  }
+}
+
+// ************************
+// * Stack with Recursion *
+// ************************
+
+// Selects every child (also nested) with a predecessor
+.stack-recursive * + * {
+  margin-top: var(--space);
+}
+
+// ******************************
+// * Steck with Nested Variants *
+// ******************************
+.stack-lg > * + * {
+  --space: 2rem;
+}
+
+.stack-sm > * + * {
+  --space: 1rem;
+}
+
+// ***********************
+// * Splitting the Stack *
+// ***********************
+
+.stack-split {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack-split > :nth-child(2) {
+  margin-bottom: auto;
+}

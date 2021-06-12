@@ -1,0 +1,24 @@
+.box {
+  --s1: 1rem;
+  --color-light: #eee;
+  --color-dark: #222;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  padding: var(--s1);
+  outline: 0.125rem solid transparent;
+  outline-offset: -0.125rem;
+}
+
+// Selects every element inside
+.box * {
+  color: inherit;
+}
+
+.box.invert {
+  /* ↓ Dark becomes light, and light becomes dark */
+  color: var(--color-light);
+  background-color: var(--color-dark);
+
+  // or, for greyscale designs:
+  // filter: invert(100%);
+}

@@ -1,0 +1,46 @@
+<header>
+  <h1>
+    The Stack
+  </h1>
+  <p>
+    <a href="https://every-layout.dev/layouts/stack/" target="blank">
+        Chapter on Every Layout
+    </a>
+  </p>
+  <p>
+    <a href="https://every-layout.dev/layouts/stack/#the-generator" target="blank">
+      Code Generator
+    </a>
+  </p>
+</header>
+
+<body>
+  <section>
+    <h2>Stack</h2>
+    <p>Same vertical margin between all <em>direct</em> children</p>
+    <%= render 'shared/stack' %>
+  </section>
+
+  <section>
+    <h2>Stack with Recursion</h2>
+    <p>Same vertical margin between <em>all</em> (also nested) children.</p>
+    <%= render 'shared/stack-recursive' %>
+  </section>
+
+  <section>
+    <h2>Stack with nested variants</h2>
+    <p>Different vertical margins for different levels of nesting</p>
+    <%= render 'shared/stack-nested' %>
+  </section>
+
+  <section>
+    <h2>
+      Splitting the Stack
+    </h2>
+    <a href="https://every-layout.dev/demos/stack-split/" target="blank">
+      Demo on Every Layout
+    </a>
+    <p>I don't understand this one</p>
+    <%= render 'shared/stack-split' %>
+  </section>
+</body>
