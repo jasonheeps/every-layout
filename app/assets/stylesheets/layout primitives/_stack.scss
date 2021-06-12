@@ -1,16 +1,3 @@
-// This is only for readability reasons,
-// not part of the 'Every Layout' concept.
-// To be refactored!
-[class^='stack'] {
-  div {
-    padding: 1rem;
-  }
-}
-
-.stack + h2 {
-  margin-top: 2rem;
-}
-
 // *********
 // * Stack *
 // *********
@@ -26,12 +13,10 @@
 
 .stack {
   // They use 1.5rem since 1.5 is the default line-height.
-
+  --space: var(--s2);
   // Question: How can I use the line-height dynamically here such that
   // if it changes, the space remains consistent?
   // I tried calc($line-height-base * $font-size-base) - didn't work.
-
-  --space: 1.5rem;
 
   // Selects every direct child but the first one
   & > * + * {
@@ -52,11 +37,11 @@
 // * Steck with Nested Variants *
 // ******************************
 .stack-lg > * + * {
-  --space: 2rem;
+  --space: var(--s3);
 }
 
 .stack-sm > * + * {
-  --space: 1rem;
+  --space: var(--s1);
 }
 
 // ***********************

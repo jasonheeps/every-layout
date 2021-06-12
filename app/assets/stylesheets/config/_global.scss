@@ -1,6 +1,17 @@
 // *************
 // * VARIABLES *
 // *************
+:root {
+  // spacers
+  --s1: 1rem;
+  --s2: 1.5rem;
+  --s3: 2.25rem;
+
+  // colors
+  --color-light: #eee;
+  --color-dark: #222;
+}
+
 $ratio: 1.25;
 
 // * borders *
@@ -18,6 +29,9 @@ $stack-child-mt: $margin-base;
 $stack-child-mt-sm: $margin-base / $ratio;
 $stack-child-mt-lg: $margin-base * $ratio;
 
+// * widths*
+$max-width: 50ch;
+
 // *********
 // * RULES *
 // *********
@@ -27,7 +41,7 @@ $stack-child-mt-lg: $margin-base * $ratio;
 
 // Exception-based approach for setting max-width:
 * {
-  max-width: 60ch;
+  max-width: $max-width;
 }
 html,
 body,
@@ -39,10 +53,8 @@ footer {
   max-width: none;
 }
 
-// Question: Does this make sense?
-// Or would I rather apply this to a .container?
-body {
-  padding: 1rem;
+a {
+  font-weight: bold;
 }
 
 // *******************
