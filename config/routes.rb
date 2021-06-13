@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/stack', to: 'pages#stack'
   get '/box', to: 'pages#box'
   get '/center', to: 'pages#center'
+  get '/cluster', to: 'pages#cluster'
+  get '/sidebar', to: 'pages#sidebar'
 end

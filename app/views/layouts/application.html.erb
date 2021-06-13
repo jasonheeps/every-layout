@@ -12,7 +12,12 @@
   </head>
 
   <body>
-    <%= link_to 'Home', root_path %>
+    <div class="box cluster border-dark top-sticky">
+      <div class="cluster-wrapper">
+        <%= link_to 'Home', root_path %>
+        <%= render 'shared/layout-links' %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

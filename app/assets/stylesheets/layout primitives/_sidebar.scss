@@ -1,0 +1,40 @@
+.with-sidebar {
+  /* ↓ Suppresses scrolling sometimes caused
+  by the overflow */
+  overflow: hidden;
+}
+
+/* ↓ targets the intermediary wrapper */
+.with-sidebar > * {
+  --space: var(--s1);
+  display: flex;
+  flex-wrap: wrap;
+
+  // This makes the elements stick to the borders of their parent
+  margin: calc(var(--space) / 2 * -1);
+}
+
+/* ↓ applies to both elements */
+.with-sidebar > * > * {
+  margin: calc(var(--space) / 2);
+}
+
+.sidebar {
+  // The sidebar does not get smaller than 20rem and it only grows when the not-sidebar wraps
+  // It is also possible to leave out the flex-basis and let the sidebar's (min-)width be
+  // determined by its content
+  flex-basis: 20rem;
+  /* ↓ Allow growing (needed for the vertical configuration) */
+  flex-grow: 1;
+}
+
+.not-sidebar {
+  // With'flex-basis: 0' the component moves to the next line when
+  // it becomes narrower than its longest word/content-element
+  flex-basis: 0;
+  flex-grow: 999;
+
+  // This is how we control where the wrapping happens!
+  // The '-1rem' takes the margin out of the equation
+  min-width: calc(50% - 1rem);
+}

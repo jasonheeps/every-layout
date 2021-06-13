@@ -53,8 +53,9 @@ footer {
   max-width: none;
 }
 
-a {
+a, a:hover {
   font-weight: bold;
+  color: $body-color !important;
 }
 
 // *******************
@@ -68,4 +69,8 @@ a {
   border: $border-width solid $gray;
 }
 
+.top-sticky {
+  position: sticky;
+  top: 0;
+}
 
