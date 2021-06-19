@@ -1,0 +1,14 @@
+.cover > * {
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+.cover > h1 {
+margin-top: auto;
+margin-bottom: auto;
+}
+.cover > :first-child:not(h1) {
+margin-top: 0;
+}
+.cover > :last-child:not(h1) {
+margin-bottom: 0;
+}

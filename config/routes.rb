@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/center', to: 'pages#center'
   get '/cluster', to: 'pages#cluster'
   get '/sidebar', to: 'pages#sidebar'
+  get '/switcher', to: 'pages#switcher'
+  get '/cover', to: 'pages#cover'
 end
